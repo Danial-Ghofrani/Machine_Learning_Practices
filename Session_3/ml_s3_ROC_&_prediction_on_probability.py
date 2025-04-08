@@ -12,9 +12,9 @@ y = df["Outcome"]
 
 print(np.unique(y))
 
-x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y)
+x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y, random_state= 0)
 
-model = LogisticRegression(max_iter=5000, warm_start=True)
+model = LogisticRegression(max_iter=5000, warm_start=True, random_state=42)
 
 model.fit(x_train, y_train)
 
